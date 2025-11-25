@@ -10,6 +10,7 @@ title: Home
 - [1947 Philco 47-1230 Restoration](projects/philco.md)
 - [RadioShift (Raspberry Pi-based time-shifting FM Radio)](projects/radioshift.md)
 - [T-Rux (Make your own Teddy Ruxpin tapes)](projects/t-rux.md)
+  
 ---
 
 
