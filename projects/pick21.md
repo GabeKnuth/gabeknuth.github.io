@@ -5,7 +5,7 @@ title: Pick21 Solitaire
 
 ## Pick21 Solitaire
 
-Pick21 is a Blackjack solitaire game similar to those found on MegaTouch bar top games that are no longer manufactured.
+Pick21 is a solitaire game similar to those found on MegaTouch bar top games that are no longer manufactured.
 
 This game has no ads, does not collect any information, and is made available free of charge simply because I wanted it available to the world. I wanted this game to exist, pure and simple.
 
@@ -32,4 +32,5 @@ After three rounds, the score is totaled, and you're free to play again.
 ## Support
 
 For support, contact me directly: gabe@gabeknuth.com
+
 
