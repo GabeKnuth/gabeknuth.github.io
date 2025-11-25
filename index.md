@@ -4,9 +4,6 @@ title: Home
 ---
 
 # Gabe Knuth  
-### Projects & "experiments"
-
-This is a simple collection of things I’ve worked on or am working on.
 
 ## My Random Projects
 - [Pick21 Solitaire (iOS)](projects/pick21.md)
