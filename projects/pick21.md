@@ -33,5 +33,24 @@ After three rounds, the score is totaled, and you're free to play again.
 
 For support, contact me directly: gabe@gabeknuth.com
 
+## Privacy Policy
+
+Pick21 Solitaire does not collect, store, transmit, or share any personal data. The app contains no analytics, no tracking, and no third-party data collection.
+
+#### In-App Purchases
+Pick21 Solitaire includes an optional tip feature processed entirely through the Apple App Store.
+All payment information is handled by Apple. The app receives no payment details, personal data, or identifiers related to your purchase.
+
+#### Data Storage
+The app stores no data on our servers. No information is transmitted off your device.
+
+#### Third-Party Services
+The app uses no third-party SDKs, analytics tools, or advertising networks.
+
+#### Children’s Privacy
+Because the app collects no data, it is safe for users of all ages.
+
+#### Contact
+For questions, please contact the developer at gabe@gabeknuth.com
 
 
