@@ -33,6 +33,10 @@ After three rounds, the score is totaled, and you're free to play again.
 
 For support, contact me directly: gabe@gabeknuth.com
 
+## Project Source
+
+This project's source code is available [here](https://github.com/GabeKnuth/Pick21)
+
 ## Privacy Policy
 
 Pick21 Solitaire does not collect, store, transmit, or share any personal data. The app contains no analytics, no tracking, and no third-party data collection.
@@ -52,5 +56,6 @@ Because the app collects no data, it is safe for users of all ages.
 
 #### Contact
 For questions, please contact the developer at gabe@gabeknuth.com
+
 
 
