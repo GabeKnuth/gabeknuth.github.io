@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gabe Knuth</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Homepage-specific styles. Shared layout lives in style.css. */
+
+  /* Title sits on top of the converging point of the dartboard */
+  .title-area {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 90px 24px 56px;
+  }
+  .title-area h1 {
+    margin: 0 0 14px;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: var(--fg);
+    text-shadow: 0 0 32px #000, 0 0 14px #000, 2px 2px 0 #000;
+  }
+  .title-area .tagline {
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--mustard);
+    text-shadow: 0 0 20px #000, 0 0 8px #000;
+  }
+
+  /* Intro paragraph */
+  .intro {
+    font-size: 15px;
+    color: var(--fg);
+  }
+  .intro p { margin: 0 0 14px; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  /* Projects list — quiet directory listing */
+  ul.projects {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul.projects li {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  ul.projects li:last-child { border: 0; }
+  ul.projects .num {
+    color: var(--dim);
+    font-size: 13px;
+    padding-top: 2px;
+  }
+  ul.projects .name {
+    color: var(--fg);
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  ul.projects a.name {
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.15s, border-color 0.15s;
+  }
+  ul.projects a.name:hover {
+    color: var(--mustard);
+    border-bottom-color: var(--mustard);
+  }
+  ul.projects .tag {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    margin-right: 10px;
+    vertical-align: 1px;
+  }
+  /* Tag colors rotate through the Atari palette */
+  .tag.t1 { color: #000; background: var(--olive); }
+  .tag.t2 { color: #000; background: var(--teal); }
+  .tag.t3 { color: #000; background: var(--mustard); }
+  .tag.t4 { color: #000; background: var(--orange); }
+  .tag.t5 { color: #fff; background: var(--rust); }
+
+  ul.projects .desc {
+    color: var(--dim);
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  /* Contact block */
+  .contact {
+    margin-top: 14px;
+    color: var(--fg);
+  }
+  .contact a {
+    color: var(--mustard);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .contact a:hover { border-bottom-color: var(--mustard); }
+</style>
+</head>
+<body>
+
+<div class="parallax-bg"></div>
+
+<div class="title-area">
+  <h1>Gabe Knuth</h1>
+  <div class="tagline">I have hobbies</div>
+</div>
+
+<div class="content">
+  <div class="intro">
+    <p>
+      I believe you get to be no more than five things at any time. Husband,
+      father, and work are locked into the top three spots. The last two
+      spots&hellip;those rotate through an ever-growing list of projects
+      (though I do tend to complete things).
+    </p>
+    <p>
+      I learn something new from each of them. This site shares a few of
+      those, and maybe some lessons learned along the way.
+    </p>
+  </div>
+
+  <h2>Projects</h2>
+
+  <ul class="projects">
+    <li>
+      <div class="num">01</div>
+      <div>
+        <a class="name" href="projects/pick21.html">Pick21 Solitaire</a>
+        <span class="tag t1">iOS</span>
+        <div class="desc">Free solitaire game for iPhone and iPad, modeled on the old MegaTouch bar-top games. No ads, no tracking. Nearly 100% vibe coded as an experiment, but definitely NOT AI slop!</div>
+      </div>
+    </li>
+    <li>
+      <div class="num">02</div>
+      <div>
+        <a class="name" href="https://github.com/GabeKnuth/RadioShift">RadioShift</a>
+        <span class="tag t2">Raspberry Pi</span>
+        <div class="desc">An FM radio with DVR-style time-shifting. Pause, rewind, and fast-forward analog broadcasts. Perfect for syncing sporting events on over-the-air TV or streaming providers with FM radio broadcasts, with a nearly unlimited buffer.</div>
+      </div>
+    </li>
+    <li>
+      <div class="num">03</div>
+      <div>
+        <a class="name" href="https://github.com/GabeKnuth/t-rux">T-Rux</a>
+        <span class="tag t3">Audio</span>
+        <div class="desc">Make your own custom Teddy Ruxpin tapes. Read a book. Make it sing Mr Roboto. Creep out your neighbors or small children! Generates the original PPM motor-control track from any audio file. Grubby support coming soon!</div>
+      </div>
+    </li>
+    <li>
+      <div class="num">04</div>
+      <div>
+        <a class="name" href="https://github.com/GabeKnuth/BnD">Custom Pinball</a>
+        <span class="tag t2">Pinball</span>
+        <div class="desc">Pinball is great. Custom pinball is better. I resurrected Gottlieb's last machine &mdash; Brooks &amp; Dunn pinball machine &mdash; from an unreleased prototype playfield. Hundreds of hours of wiring, figuring out undocumented mechs, fabricating missing parts, and writing most of the rules and code brought this machine back to life, built on Fast Pinball hardware and Mission Pinball Framework.</div>
+      </div>
+    </li>
+    <li>
+      <div class="num">05</div>
+      <div>
+        <span class="name">Ultra Shuffle Bowl</span>
+        <span class="tag t4">Arcade</span>
+        <div class="desc">A rebuilt shuffleboard bowling machine, with new retro-style artwork inspired by the ball returns in The Big Lebowski. These are electromechanical works of art in every way.</div>
+      </div>
+    </li>
+    <li>
+      <div class="num">06</div>
+      <div>
+        <span class="name">Electronic Dartboard</span>
+        <span class="tag t5">Legacy</span>
+        <div class="desc">Built way back in Visual Basic .NET to see if I could replicate the electronic dart boards found in bars. It works, though you probably can't use it. Some day I'll update to use a real dartboard and computer vision.</div>
+      </div>
+    </li>
+    <li>
+      <div class="num">07</div>
+      <div>
+        <a class="name" href="https://www.thingiverse.com/gabeknuth/designs">Thingiverse Designs</a>
+        <span class="tag t1">3D Printing</span>
+        <div class="desc">A collection of 3D-printable parts and designs I've posted to Thingiverse over the years.</div>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Contact</h2>
+  <div class="contact">
+    <a href="mailto:gabe@gabeknuth.com">gabe@gabeknuth.com</a>
+  </div>
+
+  <footer>
+    <span>&copy; Gabe Knuth</span>
+    <span>Omaha, NE</span>
+  </footer>
+</div>
+
+<script src="parallax.js"></script>
+
+</body>
+</html>

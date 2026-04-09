@@ -1,0 +1,145 @@
+/* Shared layout for gabeknuth.com — used by every page on the site.
+   Page-specific styles live inline in each page's <head>. */
+
+:root {
+  --bg:      #0a0a0a;
+  --fg:      #e8e2d2;
+  --dim:     #8a8470;
+  --rule:    #2a2a2a;
+
+  /* Atari palette pulled from the dartboard art */
+  --olive:   #6b8e3d;
+  --teal:    #4f8b85;
+  --mustard: #d4a017;
+  --orange:  #d36b1e;
+  --rust:    #b34a1c;
+
+  /* Top fade overlay tuning */
+  --fade-top: 0.8;
+  --fade-height: 296px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 160px;
+  background-color: #000;
+  color: var(--fg);
+  font-family: "Menlo", "Monaco", "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+/* Parallax background layer:
+     1) Dartboard SVG at the top (no-repeat).
+     2) Vertical-stripes SVG tiled downward, picking up where the
+        dartboard ends so the rays continue forever.
+   Position: fixed so it's anchored to the viewport, then translated
+   vertically by parallax.js as the page scrolls. */
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10000px;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #000;
+  background-image:
+    url('img/dartboard-rainbow.svg'),
+    url('img/dartboard-rainbow-vertical-only.svg');
+  background-repeat:
+    no-repeat,
+    repeat-y;
+  background-size:
+    1800px 1328px,
+    1800px 664px;
+  background-position:
+    center top,
+    center 1328px;
+  will-change: transform;
+}
+
+/* Top fade overlay — darkens the top of the page and fades to transparent.
+   Sits above the background but below the content/title. */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--fade-height);
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, var(--fade-top)) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* Subtle CRT scanlines over the whole page */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* Semi-transparent content column.
+   Background bands continue showing through, dimmed. */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto 80px;
+  background: rgba(0, 0, 0, 0.78);
+  padding: 32px 40px;
+}
+
+/* Section heading */
+h2 {
+  color: var(--mustard);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 36px 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+a { color: var(--mustard); }
+a:visited { color: var(--orange); }
+
+/* Default footer — bottom row of a content card */
+footer {
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  color: var(--dim);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+footer a {
+  color: var(--mustard);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
